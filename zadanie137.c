@@ -49,6 +49,7 @@ void pierwsiastek_kwadratowy()
     double delta,x1,x2;
     printf("podaj a\n");
     scanf("%lf",&a);
+
         if(a==0){
         printf("a nie moze byc zerem\n");
         }
@@ -58,11 +59,13 @@ void pierwsiastek_kwadratowy()
         printf("podaj c\n");
         scanf("%lf",&c);
         delta = (b*b -(4*a*c));
+
              if(delta>0){
              x1=(-b+sqrt(delta))/(2*a);
              x2=(-b-sqrt(delta))/(2*a);
              printf("x1=%.2f, x2=%.2f\n",x1,x2);
              }
+
              else if(delta==0){
                     x1=(-b/(2*a));
                     printf("x1=%lf\n", x1);
