@@ -16,7 +16,7 @@ int main() {
 
     wyjscie_z_programu = FALSE;
     while(TRUE) {
-        printf("Opcje programu:\n");
+        printf("\nOpcje programu:\n");
         printf("===============\n");
         printf("%d %s\n", OPCJA_PIERWIASTEK_ROWNANIA_LINIOWEGO,  " - pierwiastek liniowy");
         printf("%d %s\n", OPCJA_PIERWIASTEK_ROWNANIA_KWADRATOWEGO,    " - pierwiastek kwadratowy");
@@ -40,8 +40,27 @@ int main() {
 
 void pierwiastek_liniowy() {
 
-
+    double a,b,x;
+    printf("%s","Podaj a = ");
+    scanf("%f",&a);
+    printf("%s","Podaj b = ");
+    scanf("%f",&b);
+    if ((a == 0) && (b == 0))
+    {
+    printf("%s","Rownanie tozsamosciowe");
+    }
+    else
+        if (a == 0)
+        {
+        printf("%s","Rownanie sprzeczne");
+        }
+        else
+            {
+            x=-b/a;
+            printf("%s %.2f","X wynosi:",x);
+            }
 }
+
 
 void pierwsiastek_kwadratowy() {
 
