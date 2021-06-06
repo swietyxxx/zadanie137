@@ -9,14 +9,14 @@
 #define OPCJA_WYJSCIE   0
 
 void pierwiastek_liniowy();
-void pierwsiastek_kwadratowy();
+void pierwiastek_kwadratowy();
 
 int main() {
     int wybrana_opcja, wyjscie_z_programu;
 
     wyjscie_z_programu = FALSE;
     while(TRUE) {
-        printf("\nOpcje programu:\n");
+        printf("Opcje programu:\n");
         printf("===============\n");
         printf("%d %s\n", OPCJA_PIERWIASTEK_ROWNANIA_LINIOWEGO,  " - pierwiastek liniowy");
         printf("%d %s\n", OPCJA_PIERWIASTEK_ROWNANIA_KWADRATOWEGO,    " - pierwiastek kwadratowy");
@@ -26,7 +26,7 @@ int main() {
 
         switch(wybrana_opcja) {
             case OPCJA_PIERWIASTEK_ROWNANIA_LINIOWEGO:   pierwiastek_liniowy();          break;
-            case OPCJA_PIERWIASTEK_ROWNANIA_KWADRATOWEGO:    pierwsiastek_kwadratowy();            break;
+            case OPCJA_PIERWIASTEK_ROWNANIA_KWADRATOWEGO:    pierwiastek_kwadratowy();            break;
             case OPCJA_WYJSCIE:     wyjscie_z_programu = TRUE;  break;
             default:                printf("Niepoprawny kod polecenia.\n");
 
@@ -39,62 +39,57 @@ int main() {
 }
 
 void pierwiastek_liniowy() {
+        float a,b,x;
 
-    double a,b,x;
-    printf("%s","Podaj a = ");
-    scanf("%f",&a);
-    printf("%s","Podaj b = ");
-    scanf("%f",&b);
-    if ((a == 0) && (b == 0))
-    {
-    printf("%s","Rownanie tozsamosciowe");
-    }
-    else
-        if (a == 0)
-        {
-        printf("%s","Rownanie sprzeczne");
-        }
-        else
-            {
-            x=-b/a;
-            printf("%s %.2f","X wynosi:",x);
-            }
+        printf("Podaj a =  ");
+
+        scanf("%f",&a);
+
+        printf("Podaj b = ");
+
+        scanf("%f",&b);
+
+        x=((-b)/a);
+
+        printf("x = %.2f\n",x);
 }
 
 
-void pierwsiastek_kwadratowy()
-{
-    double a, b, c;
+
+void pierwiastek_kwadratowy() {
+
+    double a,b,c;
     double delta,x1,x2;
+
     printf("podaj a\n");
     scanf("%lf",&a);
-
-
-void pierwsiastek_kwadratowy() {
- main
-
         if(a==0){
-        printf("a nie moze byc zerem\n");
+        printf("a mnie moze byc zerem\n");
         }
         else {
         printf("podaj b\n");
         scanf("%lf",&b);
         printf("podaj c\n");
         scanf("%lf",&c);
-        delta = (b*b -(4*a*c));
-
+        delta = ((b*b)-(4.0*a*c));
              if(delta>0){
-             x1=(-b+sqrt(delta))/(2*a);
-             x2=(-b-sqrt(delta))/(2*a);
+             x1=(-b+sqrt(delta))/(2.0*a);
+             x2=(-b-sqrt(delta))/(2.0*a);
              printf("x1=%.2f, x2=%.2f\n",x1,x2);
              }
-
              else if(delta==0){
-                    x1=(-b/(2*a));
+                    x1=(-b/(2.0*a));
                     printf("x1=%lf\n", x1);
                     }
                     else if(delta<0)
                           printf("Nie ma rozwiazan\n");
       }
 
+
+
 }
+
+
+
+
+
